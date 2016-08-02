@@ -1,0 +1,22 @@
+{
+  "name": "stars",
+  "homepage": "https://github.com/skullnbones/stars",
+  "authors": [
+    "skullnbones <jasonbejot@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gyronorm": "^2.0.4",
+    "jquery": "^3.1.0"
+  }
+}

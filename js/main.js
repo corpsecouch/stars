@@ -1,12 +1,22 @@
 $(function(){
   var gn = new GyroNorm();
 
+  var latElem = $('#lat');
+  var longElem = $('#long');
+  var geoHandler = function(position) {
+      latElem.text(position.coords.latitude);
+      longElem.text(position.coords.longitude);
+  };
+
   gn.init().then(function(){
+
+    navigator.geolocation.getCurrentPosition(geoHandler);
+    navigator.geolocation.watchPosition(geoHandler);
+    
     var alphaElem = $('#alpha');
     var betaElem = $('#beta');
     var gammaElem = $('#gamma');
     var absoluteElem = $('#absolute');
-
 
     gn.start(function(data){
       // Process:
